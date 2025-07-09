@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="sorting.png">
+
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main-wrapper">
+
+
+        <div class="cont">
+            <div id="mode-toggle">
+                <label class="switch" for="toggle-mode">
+                    <input type="checkbox" id="toggle-mode" title="Toggle dark/light mode">
+                    <span class="slider"></span>
+                </label>
+                <span id="mode-label">Dark Mode</span>
+            </div>
+
+            <p class="navheading">Sorting Visualizer</p>
+            <div class="arrayinputs">
+
+                <label for="size">Size of the array</label>
+                <input type="range" id="size" min="10" max="50" step="1" value="30"
+                    title="Select the size of the array">
+                <label for="speed">Speed of the algorithm</label>
+                <input type="range" id="speed" min="100" max="5000" step="1" value="1"
+                    title="Select the speed of the algorithm">
+                <button type="button" id="generate">Create a New Array</button>
+
+            </div>
+
+
+            <div id="but">
+                <button type="button" id="bubbleSortBtn">BubbleSort</button>
+                <button type="button" id="selectionSortBtn">SelectionSort</button>
+                <button type="button" id="InsertionSortBtn">InsertionSort</button>
+                <button type="button" id="mergeSortBtn">MergeSort</button>
+                <button type="button" id="quickSortBtn">QuickSort</button>
+                <button type="button" id="heapSortBtn">HeapSort</button>
+            </div>
+
+        </div>
+        <div id="bars-container"></div>
+
+        <div id="info-and-stats-wrapper">
+
+            <div id="Info_Cont1">
+                <h3>TIME COMPLEXITY</h3>
+                <div class="Complexity_Containers" id="Time_Complexity_Container">
+                    <div class="Pair_Definitions">
+                        <p class="Sub_Heading">Worst case:</p>
+                        <p id="Time_Worst"></p>
+                    </div>
+                    <div class="Pair_Definitions">
+                        <p class="Sub_Heading">Best case:</p>
+                        <p id="Time_Best"></p>
+                    </div>
+                    <div class="Pair_Definitions">
+                        <p class="Sub_Heading">Average case:</p>
+                        <p id="Time_Average"></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="stats-panel">
+                <h3>Sorting Stats</h3>
+                <p>Comparisons: <span id="comparison-count">0</span></p>
+                <p>Swaps: <span id="swap-count">0</span></p>
+            </div>
+        </div>
+
+
+        <div id="Info_Cont2">
+            <h3>SPACE COMPLEXITY</h3>
+            <div class="Complexity_Containers" id="Space_Complexity_Container">
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Space Complexity:</p>
+                    <p id="Time_Space"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="visualizer-container">
+            <div id="bars-container"></div>
+        </div>
+
+
+
+        <script src="script2.js"></script>
+    </div>
+</body>
+
+</html>
